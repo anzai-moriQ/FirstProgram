@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		crossorigin="anonymous" >
+	<link rel="stylesheet" th:href="@{/CSS/accountstyle.css}" >
+	<link rel="stylesheet" th:href="@{/CSS/logbackstyle.css}" >
+	<title>登録確認</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">	
+			<a class="navbar-brand" href="/top/login">優しい言葉ジェネレーター</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        	<ul class="navbar-nav mr-auto">
+        		<li class="nav-item">
+        			<a class="nav-link" href="/game">退屈度ゲームメーカー<span class="sr-only">(current)</span></a>
+        		</li>
+        		<li class="nav-item">
+        			<a class="nav-link" href="/saying">ことわざメーカー<span class="sr-only">(current)</span></a>
+        		</li>
+        		<li class="nav-item">
+        			<a class="nav-link" href="/addword">言葉を登録する</a>
+        		</li>
+        		<li class="nav-item">
+        			<a class="nav-link" href="/">ログアウト</a>
+        		</li>
+        	</ul>
+        </div>
+		</nav>
+		<div>
+			<ul class="background">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</header>
+
+	<main class="text-center">
+		<h3>この内容で登録しました</h3>
+
+		<form class="form-add">
+			<input type="text" name="name" th:value="${name}"  class="form-control"> 
+			<input type="password" name="pass" th:value="${pass}"  class="form-control">
+		</form>
+		
+		<hr>
+
+		<a href="/update">入力した登録情報を修正する</a>
+		<br>
+		<a href="/top/login">優しい言葉ジェネレーターへ</a>
+
+	</main>
+
+</body>
+</html>

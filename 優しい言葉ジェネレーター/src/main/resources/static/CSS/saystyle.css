@@ -1,0 +1,100 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.ahead{
+	top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+}
+.background li {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    -webkit-animation: anime 40s linear 0s infinite ;
+    animation: anime 40s linear 0s infinite ;
+}
+.background li:nth-child(1) { 
+    background-image:linear-gradient(-50deg, rgba(168, 80, 186, .8), rgba(245, 120, 24, .8)),  url(/img/rockband.jpg) ;  /* 背景画像を入力して下さい */	
+}
+.background li:nth-child(2) {
+    background-image:linear-gradient(-140deg, rgba(247, 230, 72, .8), rgba(191, 23, 124, .8)), url(/img/japan-4259948_1280.jpg);
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+.background li:nth-child(3) {
+    background-image:linear-gradient(-55deg, rgba(85, 212, 255, .8), rgba(255, 238, 30, .8)), url(/img/DSC9782esports_TP_V.jpg);
+    -webkit-animation-delay: 20s;
+    animation-delay: 20s;
+}
+.background li:nth-child(4) {
+    background-image:linear-gradient(-70deg, rgba(173, 255, 216, .8), rgba(84, 192, 255, .8)), url(/img/shikun5V7A1829_TP_V.jpg);
+    -webkit-animation-delay: 30s;
+    animation-delay: 30s;
+}
+@-webkit-keyframes anime { 
+    0% {
+        -webkit-animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    10% {
+        -webkit-transform: scale(1.0);
+        opacity: 1;
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+            -webkit-animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    50% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+    }
+    100% { opacity: 0 }
+}
+@keyframes anime { 
+    0% {
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    10% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(1.0);
+            animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+    100% { opacity: 0 }
+}
+.container{
+	width:7000px;
+	z-index: 10;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+		crossorigin="anonymous" >
+	<link rel="stylesheet" th:href="@{/CSS/saystyle.css}" >
+	<title>本日のことわざ</title>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-success">	
+			<a class="navbar-brand" href="/top/login">優しい言葉ジェネレーター</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        	<ul class="navbar-nav mr-auto">
+        		<li class="nav-item">
+        			<a class="nav-link" href="/game">退屈度ゲームメーカー<span class="sr-only">(current)</span></a>
+        		</li>
+        		<li class="nav-item">
+        			<a class="nav-link" href="/saying">ことわざメーカー<span class="sr-only">(current)</span></a>
+        		</li>
+        		<li class="nav-item">
+        			<a class="nav-link" href="/addword">言葉を登録する</a>
+        		</li>
+        		<li class="nav-item">
+        			<a class="nav-link" href="/">ログアウト</a>
+        		</li>
+        	</ul>
+        </div>
+		</nav>
+		<div class="ahead">
+			<ul class="background">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</header>
+
+	<main class="container">
+		<h1 style="font-size: 50px">本日のことわざガチャ</h1>
+		<!-- ここにことわざを表示 -->
+		<div>あなたの今日のことわざは</div>
+		<h3 class="mt-2 mb-2">[[${word}]]</h3>
+		ことわざランク：<b>[[${grade}]]</b> です。 <br> また会おう！
+
+		<hr>
+
+		<a href="/top/login">優しい言葉ジェネレーターに戻る</a>
+
+	</main>
+
+</body>
+</html>
