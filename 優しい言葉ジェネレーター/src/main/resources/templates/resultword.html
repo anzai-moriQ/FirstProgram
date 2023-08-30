@@ -28,9 +28,10 @@
 			function display_image() {
 				iValue = Math.random() * 5;
 				rNumber = Math.ceil(iValue);
-				if (rNumber == 0)
+				if (rNumber == 0) {
 					rNumber++;
-				document.image1.src = eval("img" + rNumber);
+					document.image1.src = "img" + rNumber;
+				}
 			}
 		</Script>
 </head>
